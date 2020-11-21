@@ -16,4 +16,7 @@ class Post extends Model
     public function getPosts(){
         return Post::all();
     }
+    public function User(){
+        return $this->belongsTo(User::class);
+    }
 }

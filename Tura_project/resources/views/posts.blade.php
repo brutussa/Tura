@@ -43,6 +43,9 @@
                             {{$post->text}}
                         </div>
                     </div>
+                    <div>
+                        <a>{{$post->user->name}}</a>
+                    </div>
                 </div>
                 @endforeach
         </div>

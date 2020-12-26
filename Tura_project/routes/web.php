@@ -36,4 +36,6 @@ Route::middleware('auth')->group(function (){
     Route::delete('posts/{id}/delete', [\App\Http\Controllers\Postscontroller::class, 'delete'])->name('post.delete');
     Route::get('/logout', [\App\Http\Controllers\LoginController::class, 'logout'])->name('logout');
     Route::get('/user_page', [\App\Http\Controllers\Postscontroller::class, 'user_page'])->name('user_page');
+    Route::post('/posts/{post}/approve', [\App\Http\Controllers\Postscontroller::class, 'post_approve'])->name('post_approve');
+
 });

@@ -20,10 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6dac81bb-6ca0-455e-8988-520944813a54" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/Tura.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/MailController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Mail/PostApprovedMail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Notifications/PostApprovedNotification.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_26_142512_alter_post_table_add_is_approves.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_26_142739_create_notifications_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/email/post_approved.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Postscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Postscontroller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/posts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,14 +167,19 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1iEGo66CSwQROqFIp66Q4wchloK" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -174,6 +189,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Symfony2.MethodSignatureTypeSettingsForm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -204,6 +220,13 @@
       <workItem from="1602843686679" duration="976000" />
       <workItem from="1602850354290" duration="421000" />
       <workItem from="1604760384761" duration="17000" />
+      <workItem from="1606736257336" duration="26000" />
+      <workItem from="1606736902443" duration="1088000" />
+      <workItem from="1607070249969" duration="64000" />
+      <workItem from="1607174646673" duration="214000" />
+      <workItem from="1608992341972" duration="4412000" />
+      <workItem from="1609006639142" duration="523000" />
+      <workItem from="1609007286898" duration="305000" />
     </task>
     <servers />
   </component>
@@ -220,11 +243,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="591" y="162" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602768889421">
-      <screen x="72" y="27" width="1848" height="948" />
-    </state>
-    <state x="591" y="162" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.948@72.27.1848.948" timestamp="1602768889421" />
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

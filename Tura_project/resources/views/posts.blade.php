@@ -36,6 +36,13 @@
                                 </button>
                             </form>
                         </div>
+                        <div>
+                            @if($post->is_approves)
+                                <button type="submit" class="fa fa-check btn-approved" url="{{route('post_approve',$post->id)}}"></button>
+                            @else
+                                <button type="submit" class="fa fa-thumbs-up btn-approve" url="{{route('post_approve',$post->id)}}"></button>
+                            @endif
+                        </div>
                     </div>
 
                     <div class="ml-12">
@@ -52,4 +59,36 @@
     </div>
 </div>
 </div>
+<script type="text/javascript">
+    $(document).ready(function (){
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        }); $(document).on('click', '.btn-approve', function (e){
+            e.preventDefault();
+            $this=$(this);
+            $.ajax({
+                type: 'POST',
+                url: $this.attr('url'),
+                success: function (){
+                    $this.removeClass('fa-thumbs-up');
+                    $this.addClass('fa-check');
+                }
+            });
+        }); $(document).on('click', '.btn-approved', function (e){
+            e.preventDefault();
+            $this=$(this);
+            $.ajax({
+                type: 'POST',
+                url: $this.attr('url'),
+                success: function (){
+                    $this.removeClass('fa-check');
+                    $this.addClass('fa-thumbs-up');
+                }
+            });
+        });
+    });
+
+</script>
 @endsection

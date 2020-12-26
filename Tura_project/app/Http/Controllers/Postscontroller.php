@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\User;
+use App\Notifications\PostApprovedNotification;
 use Illuminate\Http\Request;
 
 class Postscontroller extends Controller
@@ -40,9 +42,29 @@ class Postscontroller extends Controller
         $post->delete();
         return redirect()->back();
     }
+
     public function user_page(){
         $my_posts=Post::all();
         return view('user.my_posts')->with('my_posts',$my_posts);
     }
 
+
+    public function post_approve(Post $post){
+
+        if ($post->is_approves==false){
+            $post->is_approves=true;
+            $data=[
+                "text"=>'post with id of'.'  '.$post->id.'  '.'has been approved'
+            ];
+
+        }else{
+            $post->is_approves=false;
+            $data=[
+                "text"=>'post with id of'.'  '.$post->id.'  '.'has been dis_approved'
+            ];
+        }
+        $post->save();
+        $user=User::find(1);
+        $user->notify(new PostApprovedNotification($data));
+    }
 }
